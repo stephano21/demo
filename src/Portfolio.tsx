@@ -349,27 +349,27 @@ function Portfolio() {
                     </div>
                     <div className="hero-stats">
                       <Row gutter={[24, 16]}>
-                        <Col xs={12} sm={6}>
+                        <Col xs={12} sm={8}>
                           <div className="stat-item">
                             <Title level={2} style={{ margin: 0, color: '#1890ff' }}>8+</Title>
                             <Text>Años Experiencia</Text>
                           </div>
                         </Col>
-                        <Col xs={12} sm={6}>
+                        <Col xs={12} sm={8}>
                           <div className="stat-item">
-                            <Title level={2} style={{ margin: 0, color: '#52c41a' }}>50+</Title>
+                            <Title level={3} style={{ margin: 0, color: '#52c41a' }}>50+</Title>
                             <Text>Proyectos</Text>
                           </div>
                         </Col>
-                        <Col xs={12} sm={6}>
+                        <Col xs={12} sm={8}>
                           <div className="stat-item">
-                            <Title level={2} style={{ margin: 0, color: '#722ed1' }}>15+</Title>
+                            <Title level={3} style={{ margin: 0, color: '#722ed1' }}>15+</Title>
                             <Text>Tecnologías</Text>
                           </div>
                         </Col>
-                        <Col xs={12} sm={6}>
+                        <Col xs={12} sm={8}>
                           <div className="stat-item">
-                            <Title level={2} style={{ margin: 0, color: '#fa8c16' }}>100%</Title>
+                            <Title level={4} style={{ margin: 0, color: '#fa8c16' }}>100%</Title>
                             <Text>Satisfacción</Text>
                           </div>
                         </Col>
@@ -443,25 +443,25 @@ function Portfolio() {
                     </Card>
 
                     <Card title="Testimonios" className="content-card" style={{ marginTop: 24 }}>
-                      <Row gutter={[24, 24]}>
+                      <div className="testimonials-grid">
                         {portfolioData.testimonials.map((testimonial, index) => (
-                          <Col xs={24} md={8} key={index}>
-                            <Card className="testimonial-card">
-                              <div className="testimonial-header">
-                                <Avatar size={60} src={testimonial.avatar} />
-                                <div className="testimonial-info">
-                                  <Title level={5} style={{ margin: 0 }}>{testimonial.name}</Title>
-                                  <Text type="secondary">{testimonial.position}</Text>
-                                </div>
+                          <Card className="testimonial-card" key={index}>
+                            <div className="testimonial-header">
+                              <Avatar size={50} src={testimonial.avatar} />
+                              <div className="testimonial-info">
+                                <Title level={5} style={{ margin: 0 }}>{testimonial.name}</Title>
+                                <Text type="secondary">{testimonial.position}</Text>
                               </div>
-                              <Paragraph className="testimonial-content">
-                                "{testimonial.content}"
-                              </Paragraph>
-                              <Rate disabled defaultValue={testimonial.rating} />
-                            </Card>
-                          </Col>
+                            </div>
+                            <Paragraph 
+                              className="testimonial-content"
+                            >
+                              "{testimonial.content}"
+                            </Paragraph>
+                            <Rate disabled defaultValue={testimonial.rating} />
+                          </Card>
                         ))}
-                      </Row>
+                      </div>
                     </Card>
                   </Col>
                   <Col xs={24} lg={8}>

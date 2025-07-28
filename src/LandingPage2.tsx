@@ -68,10 +68,12 @@ function LandingPage2() {
                   ✨ Innovación Digital
                 </Tag>
               </div>
-              <Title level={1} className="hero-title-modern">
-                Construimos el <span className="highlight-modern">Futuro</span> Digital
+              <Title level={1} className="hero-title-modern" style={{ color: '#ffffff' }}>
+                <span style={{ color: '#ffffff' }}>Construimos el </span>
+                <span className="highlight-modern">Futuro</span>
+                <span style={{ color: '#ffffff' }}> Digital</span>
               </Title>
-              <Paragraph className="hero-subtitle-modern">
+              <Paragraph className="hero-subtitle-modern" style={{ color: '#ffffff' }}>
                 Transformamos empresas a través de soluciones digitales innovadoras, 
                 creando experiencias únicas que conectan con el futuro.
               </Paragraph>
@@ -85,16 +87,16 @@ function LandingPage2() {
               </div>
               <div className="hero-stats-modern">
                 <div className="stat-item-modern">
-                  <Text className="stat-number-modern">250+</Text>
-                  <Text className="stat-label-modern">Proyectos Digitales</Text>
+                  <Text className="stat-number-modern" style={{ color: '#6366f1' }}>250+</Text>
+                  <Text className="stat-label-modern" style={{ color: '#ffffff' }}>Proyectos Digitales</Text>
                 </div>
                 <div className="stat-item-modern">
-                  <Text className="stat-number-modern">99%</Text>
-                  <Text className="stat-label-modern">Satisfacción</Text>
+                  <Text className="stat-number-modern" style={{ color: '#6366f1' }}>99%</Text>
+                  <Text className="stat-label-modern" style={{ color: '#ffffff' }}>Satisfacción</Text>
                 </div>
                 <div className="stat-item-modern">
-                  <Text className="stat-number-modern">8+</Text>
-                  <Text className="stat-label-modern">Años Innovando</Text>
+                  <Text className="stat-number-modern" style={{ color: '#6366f1' }}>8+</Text>
+                  <Text className="stat-label-modern" style={{ color: '#ffffff' }}>Años Innovando</Text>
                 </div>
               </div>
             </div>

@@ -58,13 +58,13 @@ function LandingPage3() {
           <div className="hero-overlay-corporate">
             <div className="hero-content-corporate">
               <div className="hero-badge-corporate">
-                <Badge.Ribbon text="Excelencia Corporativa" color="#d4af37" style={{ fontSize: '12px' }}>
-                  <div className="hero-badge-container-corporate">
-                    <Title level={1} className="hero-title-corporate">
-                      Lideramos la <span className="highlight-corporate">Excelencia</span> Empresarial
-                    </Title>
-                  </div>
-                </Badge.Ribbon>
+                <div className="hero-badge-container-corporate">
+                  <Title level={1} className="hero-title-corporate" style={{ color: '#ffffff' }}>
+                    <span style={{ color: '#ffffff' }}>Lideramos la </span>
+                    <span className="highlight-corporate">Excelencia</span>
+                    <span style={{ color: '#ffffff' }}> Empresarial</span>
+                  </Title>
+                </div>
               </div>
               <Paragraph className="hero-subtitle-corporate">
                 Somos consultores ejecutivos de élite, especializados en estrategias corporativas 
@@ -373,10 +373,10 @@ function LandingPage3() {
         {/* CTA Section */}
         <div className="cta-section-corporate">
           <div className="section-container">
-            <Title level={2} className="cta-title-corporate">
+            <Title level={2} className="cta-title-corporate" style={{ color: '#ffffff' }}>
               ¿Listo para Liderar su Industria?
             </Title>
-            <Paragraph className="cta-subtitle-corporate">
+            <Paragraph className="cta-subtitle-corporate" style={{ color: '#ffffff' }}>
               Únase a las empresas Fortune 500 que ya han experimentado 
               el poder de nuestra consultoría ejecutiva de élite.
             </Paragraph>

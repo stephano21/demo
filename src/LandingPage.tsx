@@ -51,14 +51,15 @@ function LandingPage() {
           <div className="hero-overlay">
             <div className="hero-content">
               <div className="hero-title-container">
-                <Title level={1} className="hero-title">
-                  Transformamos Ideas en <span className="highlight">Resultados</span>
+                <Title level={1} className="hero-title" style={{ color: '#ffffff' }}>
+                  <span style={{ color: '#ffffff' }}>Transformamos Ideas en </span>
+                  <span className="highlight">Resultados</span>
                 </Title>
                 <div className="hero-badge">
                   <span>Líderes en Consultoría</span>
                 </div>
               </div>
-              <Paragraph className="hero-subtitle">
+              <Paragraph className="hero-subtitle" style={{ color: '#ffffff' }}>
                 Somos líderes en consultoría empresarial, especializados en estrategias 
                 innovadoras que impulsan el crecimiento y la excelencia operacional.
               </Paragraph>
@@ -349,10 +350,10 @@ function LandingPage() {
         {/* CTA Section */}
         <div className="cta-section">
           <div className="section-container">
-            <Title level={2} className="cta-title">
+            <Title level={2} className="cta-title" style={{ color: '#ffffff' }}>
               ¿Listo para Transformar su Empresa?
             </Title>
-            <Paragraph className="cta-subtitle">
+            <Paragraph className="cta-subtitle" style={{ color: '#ffffff' }}>
               Únase a cientos de empresas que ya han experimentado 
               el impacto de nuestras soluciones estratégicas.
             </Paragraph>

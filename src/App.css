@@ -102,9 +102,11 @@
 }
 
 .hero-title-container {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 24px;
+  width: 100%;
 }
 
 .hero-title {
@@ -112,8 +114,12 @@
   font-weight: 800;
   margin-bottom: 24px;
   line-height: 1.1;
-  color: white;
+  color: #ffffff !important;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title * {
+  color: #ffffff !important;
 }
 
 .hero-title .highlight {
@@ -123,20 +129,27 @@
   background-clip: text;
   text-shadow: none;
   font-weight: 900;
+  color: #52c41a !important;
 }
 
 .hero-badge {
-  position: absolute;
-  top: -10px;
-  right: -120px;
-  background: linear-gradient(135deg, #1890ff 0%, #40a9ff 100%);
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50px;
+  padding: 8px 20px;
+  margin-bottom: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge span {
   color: white;
-  padding: 6px 16px;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 600;
-  box-shadow: 0 4px 12px rgba(24, 144, 255, 0.3);
-  white-space: nowrap;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 .hero-subtitle {
@@ -145,6 +158,16 @@
   opacity: 0.95;
   line-height: 1.6;
   font-weight: 400;
+  color: #ffffff !important;
+}
+
+.hero-content .ant-typography {
+  color: #ffffff !important;
+}
+
+.hero-content .ant-typography.ant-typography-secondary {
+  color: #ffffff !important;
+  opacity: 0.9;
 }
 
 .hero-buttons {
@@ -465,10 +488,7 @@
   overflow: hidden;
 }
 
-.testimonial-content {
-  text-align: center;
-  padding: 60px 40px;
-}
+/* .testimonial-content rule removed to avoid conflicts with Portfolio testimonials */
 
 .testimonial-header {
   display: flex;
@@ -535,12 +555,12 @@
 }
 
 .cta-title {
-  color: white;
+  color: #ffffff !important;
   font-size: 3rem;
   font-weight: 800;
   margin-bottom: 16px;
-  position: relative;
-  z-index: 1;
+  text-align: center;
+  letter-spacing: -0.02em;
 }
 
 .cta-subtitle {
@@ -550,8 +570,8 @@
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
-  position: relative;
-  z-index: 1;
+  text-align: center;
+  color: #ffffff !important;
 }
 
 .cta-buttons {
@@ -744,13 +764,16 @@
 }
 
 .hero-title-modern {
-  font-size: 4.5rem;
-  font-weight: 900;
+  font-size: 4rem;
+  font-weight: 800;
   margin-bottom: 24px;
   line-height: 1.1;
-  color: white;
-  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  letter-spacing: -0.02em;
+  color: #ffffff !important;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-title-modern * {
+  color: #ffffff !important;
 }
 
 .hero-title-modern .highlight-modern {
@@ -760,17 +783,25 @@
   background-clip: text;
   text-shadow: none;
   font-weight: 900;
+  color: #6366f1 !important;
 }
 
 .hero-subtitle-modern {
   font-size: 1.25rem;
   margin-bottom: 48px;
-  opacity: 0.9;
+  opacity: 0.95;
   line-height: 1.6;
   font-weight: 400;
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
+  color: #ffffff !important;
+}
+
+.hero-content-modern .ant-typography {
+  color: #ffffff !important;
+}
+
+.hero-content-modern .ant-typography.ant-typography-secondary {
+  color: #ffffff !important;
+  opacity: 0.9;
 }
 
 .hero-buttons-modern {
@@ -831,19 +862,21 @@
 
 .stat-number-modern {
   display: block;
-  font-size: 2.5rem;
-  font-weight: 900;
-  color: #6366f1;
+  font-size: 3rem;
+  font-weight: 800;
+  color: #6366f1 !important;
+  text-shadow: 0 2px 4px rgba(99, 102, 241, 0.3);
   margin-bottom: 8px;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .stat-label-modern {
+  display: block;
   font-size: 0.9rem;
-  opacity: 0.8;
   font-weight: 500;
+  color: #ffffff !important;
+  opacity: 0.9;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.5px;
 }
 
 /* Stats Section Moderno */
@@ -1272,6 +1305,15 @@
   color: #9ca3af;
 }
 
+.cta-section-modern .ant-typography {
+  color: #ffffff !important;
+}
+
+.cta-section-modern .ant-typography.ant-typography-secondary {
+  color: #ffffff !important;
+  opacity: 0.9;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .header-content {
@@ -1297,7 +1339,13 @@
   .hero-badge {
     position: static;
     margin-top: 16px;
+    margin-bottom: 16px;
     display: inline-block;
+    padding: 6px 16px;
+  }
+  
+  .hero-badge span {
+    font-size: 0.8rem;
   }
   
   .hero-subtitle {
@@ -1407,6 +1455,12 @@
   .hero-badge {
     font-size: 0.75rem;
     padding: 4px 12px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .hero-badge span {
+    font-size: 0.7rem;
   }
   
   .hero-subtitle {
@@ -1532,24 +1586,46 @@
 .hero-content-corporate {
   text-align: center;
   color: white;
-  max-width: 900px;
+  max-width: 1000px;
   padding: 0 24px;
-  z-index: 2;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .hero-badge-container-corporate {
-  display: inline-block;
+  display: block;
   margin-bottom: 24px;
+  width: 100%;
+  max-width: 100%;
+  overflow: visible;
 }
 
 .hero-title-corporate {
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 800;
   margin-bottom: 24px;
-  line-height: 1.1;
-  color: white;
+  line-height: 1.3;
+  color: #ffffff !important;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+  word-wrap: break-word;
+  hyphens: auto;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  white-space: normal;
+  text-align: center;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.hero-title-corporate * {
+  color: #ffffff !important;
+}
+
+.hero-title-corporate .text-white {
+  color: #ffffff !important;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .hero-title-corporate .highlight-corporate {
@@ -1559,17 +1635,19 @@
   background-clip: text;
   text-shadow: none;
   font-weight: 900;
+  color: #d4af37 !important;
 }
 
 .hero-subtitle-corporate {
   font-size: 1.25rem;
   margin-bottom: 48px;
-  opacity: 0.9;
+  opacity: 0.95;
   line-height: 1.6;
   font-weight: 400;
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  color: #ffffff;
 }
 
 .hero-buttons-corporate {
@@ -1638,11 +1716,13 @@
 }
 
 .stat-label-corporate {
+  display: block;
   font-size: 0.9rem;
-  opacity: 0.8;
   font-weight: 500;
+  color: #ffffff;
+  opacity: 0.9;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.5px;
 }
 
 /* Stats Section Corporativo */
@@ -1979,7 +2059,7 @@
 }
 
 .cta-title-corporate {
-  color: white;
+  color: #ffffff !important;
   font-size: 3.5rem;
   font-weight: 800;
   margin-bottom: 16px;
@@ -1991,12 +2071,13 @@
 .cta-subtitle-corporate {
   font-size: 1.125rem;
   margin-bottom: 48px;
-  opacity: 0.9;
+  opacity: 0.95;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
   position: relative;
   z-index: 1;
+  color: #ffffff !important;
 }
 
 .cta-buttons-corporate {
@@ -2094,6 +2175,15 @@
   color: #ccc;
 }
 
+.cta-section-corporate .ant-typography {
+  color: #ffffff !important;
+}
+
+.cta-section-corporate .ant-typography.ant-typography-secondary {
+  color: #ffffff !important;
+  opacity: 0.9;
+}
+
 /* Responsive Design para Landing Page 3 */
 @media (max-width: 768px) {
   .nav-buttons-corporate {
@@ -2102,10 +2192,14 @@
   
   .hero-title-corporate {
     font-size: 2.5rem;
+    line-height: 1.4;
+    padding: 0 8px;
+    margin: 0 auto;
   }
   
   .hero-subtitle-corporate {
     font-size: 1.125rem;
+    padding: 0 16px;
   }
   
   .hero-buttons-corporate {
@@ -2155,10 +2249,14 @@
 @media (max-width: 480px) {
   .hero-title-corporate {
     font-size: 2rem;
+    line-height: 1.5;
+    padding: 0 4px;
+    margin: 0 auto;
   }
   
   .hero-subtitle-corporate {
     font-size: 1rem;
+    padding: 0 12px;
   }
   
   .section-title-corporate {
