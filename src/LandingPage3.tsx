@@ -1,35 +1,22 @@
-import React from 'react';
-import { Layout, Typography, Button, Row, Col, Card, Avatar, Statistic, Divider, Badge, Progress } from 'antd';
+import { Layout, Typography, Button, Row, Col, Card, Avatar, Statistic, Divider, Badge } from 'antd';
 import { 
-  RocketOutlined, 
   TeamOutlined, 
-  TrophyOutlined, 
   GlobalOutlined,
   CheckCircleOutlined,
-  StarOutlined,
   ArrowRightOutlined,
   PlayCircleOutlined,
-  SafetyCertificateOutlined,
-  BulbOutlined,
-  BarChartOutlined,
   CustomerServiceOutlined,
   ClockCircleOutlined,
   DollarOutlined,
-  HeartOutlined,
-  ThunderboltOutlined,
-  EyeOutlined,
-  SettingOutlined,
   BankOutlined,
   AuditOutlined,
   ProjectOutlined,
   RiseOutlined,
   CrownOutlined,
-  AimOutlined,
-  CompassOutlined,
   TrophyFilled,
   StarFilled
 } from '@ant-design/icons';
-import { imageConfig, getOptimizedImage } from './config/images';
+import { imageConfig } from './config/images';
 import './App.css';
 
 const { Header, Content, Footer } = Layout;

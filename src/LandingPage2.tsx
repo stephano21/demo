@@ -1,4 +1,3 @@
-import React from 'react';
 import { Layout, Typography, Button, Row, Col, Card, Avatar, Statistic, Divider, Tag } from 'antd';
 import { 
   RocketOutlined, 
@@ -9,9 +8,6 @@ import {
   StarOutlined,
   ArrowRightOutlined,
   PlayCircleOutlined,
-  SafetyCertificateOutlined,
-  BulbOutlined,
-  BarChartOutlined,
   CustomerServiceOutlined,
   ClockCircleOutlined,
   DollarOutlined,
@@ -20,7 +16,7 @@ import {
   EyeOutlined,
   SettingOutlined
 } from '@ant-design/icons';
-import { imageConfig, getOptimizedImage } from './config/images';
+import { imageConfig } from './config/images';
 import './App.css';
 
 const { Header, Content, Footer } = Layout;

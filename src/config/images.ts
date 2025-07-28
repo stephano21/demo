@@ -142,7 +142,7 @@ export const getImageUrl = (baseUrl: string, width?: number, height?: number, fi
 // Función para obtener imagen optimizada
 export const getOptimizedImage = (imageKey: keyof typeof imageConfig, width?: number, height?: number) => {
   const image = imageConfig[imageKey];
-  if (!image) return '';
+  if (!image || typeof image !== 'object' || !('url' in image)) return '';
   
   return getImageUrl(image.url, width || image.width, height || image.height, 'crop');
 }; 

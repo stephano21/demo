@@ -1,4 +1,3 @@
-import React from 'react';
 import { Layout, Typography, Button, Row, Col, Card, Avatar, Statistic, Divider, Badge } from 'antd';
 import { 
   RocketOutlined, 
@@ -16,7 +15,7 @@ import {
   ClockCircleOutlined,
   DollarOutlined
 } from '@ant-design/icons';
-import { imageConfig, getOptimizedImage } from './config/images';
+import { imageConfig } from './config/images';
 import './App.css';
 
 const { Header, Content, Footer } = Layout;
